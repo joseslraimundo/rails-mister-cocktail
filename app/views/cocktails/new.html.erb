@@ -1,8 +1,11 @@
 <h1>New Cocktail</h1>
 <div class = "new-cocktail">
-  <%= form_for @cocktail do |c| %>
+  <%= simple_form_for @cocktail do |c| %>
   <%= c.label :name, "Enter name" %>
   <%= c.text_field :name %>
+  <%= c.input :photo %>
+  <%= c.input :photo_cache, as: :hidden %>
   <%= c.submit%>
   <% end %>
 </div>
+
